@@ -1,9 +1,11 @@
 #include <SoftwareSerial.h>
 SoftwareSerial mySerial(2, 3); // RX, TX
-char a[15] = {'0', '0', '0', '0', '0'};
+char i = '0';
+char a[10] = {'0', '0', '0', '0', '0', '0', '0', '0', '0', '0'};
 int k = 0;
 void setup()
 {
+Serial.begin(9600);
 while (!Serial) ;
 mySerial.begin(9600);
  
@@ -30,18 +32,12 @@ Serial.print(a[2]);
 Serial.print(a[3]);
 Serial.print(a[4]);
 Serial.print(a[5]);
+Serial.print(a[6]);
+Serial.print(a[7]);
+Serial.print(a[8]);
+Serial.print(a[9]);
+;
 
-if (a[0] == '8' && a[1] == '8' && a[2] == '5' && a[3] == '1' && a[4] == '9' && a[5] == '5' {
-Serial.print("Name : ");
-Serial.println("Fanta Orange");
-Serial.println();
-}
-if (a[0] == '8' && a[1] == '8' && a[2] == '5' && a[3] == '1' && a[4] == '9' && a[5] == '5' {
-Serial.print("Name : ");
-Serial.println("Insert Data);
-Serial.println();
-}
-k = 0;
 }
 }
 }
