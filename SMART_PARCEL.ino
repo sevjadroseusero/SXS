@@ -1,7 +1,7 @@
 #include <SoftwareSerial.h>
 SoftwareSerial mySerial(2, 3); // RX, TX
 char i = '0';
-char a[10] = {'0', '0', '0', '0', '0', '0', '0', '0', '0', '0'};
+char a[15] = {'0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0'};
 int k = 0;
 void setup()
 {
@@ -36,6 +36,9 @@ Serial.print(a[6]);
 Serial.print(a[7]);
 Serial.print(a[8]);
 Serial.print(a[9]);
+Serial.print(a[10]);
+Serial.print(a[11]);
+Serial.println(a[12])
 ;
 
 }
