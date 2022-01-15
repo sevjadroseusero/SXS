@@ -14,7 +14,7 @@ void loop()
 {
 if (mySerial.available()) {
 i = mySerial.read();
-a[k] = int;
+a[k] = i;
  
  
 k = k + 1;
@@ -39,12 +39,12 @@ Serial.println(a[12]);
  
 if (a[0] == '8' && a[1] == '8' && a[2] == '5' && a[3] == '1' && a[4] == '9' && a[5] == '5' && a[6] == '9' && a[7] == '1' && a[8] == '3' && a[9] == '2' && a[10] == '1' && a[11] == '6' && a[12] == '6') {
 Serial.print("Name : ");
-Serial.println("Name");
+Serial.println("Scan QR Code");
 Serial.println();
 }
 if (a[0] == '8' && a[1] == '8' && a[2] == '5' && a[3] == '1' && a[4] == '9' && a[5] == '5' && a[6] == '9' && a[7] == '1' && a[8] == '3' && a[9] == '2' && a[10] == '1' && a[11] == '7' && a[12] == '3') {
 Serial.print("Name : ");
-Serial.println("Name");
+Serial.println("Drop the Parcel");
 Serial.println();
 }
 k = 0;
