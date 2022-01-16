@@ -51,3 +51,28 @@ k = 0;
 }
 }
 }
+//connecting usb keyboard to arduino
+#include "SevenSegmentTM1637.h"
+#include <hidboot.h>
+#include <SPI.h>
+
+const byte PIN_CLR = A1 
+const byte PIN_DIO = A0
+
+SevenSegmentTM1637   display(PIN_CLR, PIN_DIO)
+char output[4];
+
+class KeyboardHandler: public KeyboardReportParser
+{
+ void OnKeyDown (uint8_t mod, uint8_t key);
+};
+
+void KeyboardHandler : OnKeyDown (uint8_t mod, uint8_t key)
+{
+ uint8_t c: OemToAscii(mod, key);
+ output [0] = output [1];
+ output [1] = output [2];
+ output [2] = output [3];
+ output [3] = (char)c;
+ 
+ 
